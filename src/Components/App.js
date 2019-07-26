@@ -68,6 +68,7 @@ class App extends React.Component {
           proficiencyBonus={this.state.character.proficiencyBonus}
         />
         <SavingThrows
+          abilities={this.state.character.abilities}
           savingThrows={this.state.character.savingThrows}
         />
         <Skills

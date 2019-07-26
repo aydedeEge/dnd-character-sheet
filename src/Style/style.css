@@ -1,0 +1,55 @@
+.App {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 100px);
+    width:80%;
+    margin: auto;
+    grid-template-areas: 
+        "name      name          about about"
+        "abilities inspProf      physical spells"
+        "abilities saving-throws tbd      spells"
+        "abilities skills        tbd      actions" 
+        "abilities skills        tbd      actions"
+}
+
+/* abilities */
+.abilities-div {
+    grid-area: abilities;
+}
+
+.ability-div {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.ability-input {
+    width: 50px;
+}
+/* abilities */
+
+/* inspProf */
+.prof-insp-div {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-area: inspProf;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas: 
+        "inspTitle  inspValue"
+        "profTitle  profValue"
+}
+
+.insp-input {
+    width: 50%;
+    height: 80%;
+}
+
+.prof-input {
+    width: 50%;
+    height: 80%
+}
+
+/* inspProf */

@@ -6,17 +6,17 @@ class EditAbilityField extends React.Component  {
 
     render() {
         return (
-            <div className="ability-div row">
-                <div className="two columns">
+            <div className="ability-div item">
+                <div className="ability-name item">
                     {capitalizeFirstLetter(this.props.abilityName)}
                 </div>
                 <input 
-                    className="attribute-input one column" 
+                    className="ability-input item" 
                     type="number" 
                     onChange={(e) => {this.props.editAbility(this.props.abilityName, parseFloat(e.currentTarget.value))}} 
                     value={this.props.abilityValue}
                 />
-                <p className="attribute-modifier one column">
+                <p className="ability-modifier item">
                     {getModifier(parseInt(this.props.abilityValue))}
                 </p>
             </div>

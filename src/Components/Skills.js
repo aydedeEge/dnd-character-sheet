@@ -5,7 +5,7 @@ class Skills extends React.Component  {
 
     render() {
         return (
-            <div className="ability-div row">
+            <div className="skills-div">
             </div>
         )
     }

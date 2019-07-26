@@ -1,7 +1,8 @@
 import React from 'react';
 import '../Style/normalize.css';
-import '../Style/skeleton.css';
+import '../Style/style.css';
 import Abilities from "./Abilities.js";
+import InspirationProficiency from "./InspirationProficiency.js";
 import SavingThrows from "./SavingThrows.js";
 import Skills from "./Skills.js";
 
@@ -13,6 +14,24 @@ class App extends React.Component {
     //Move the skills to a helper method or something, doesn't need to be in state
     this.state = {
       character: {
+        about: {
+          name: "",
+          class: "",
+          level: 1,
+          playerName: "",
+          race: "",
+          alignment: ""
+        },
+        inspiration: "",
+        proficiencyBonus: 0,
+        physical:{
+          armorClass: 0,
+          initiative: 0,
+          speed: 30,
+          hitPointMax: 1,
+          hitPointCurrent: 1,
+          tempHitPoints: 0
+        },
         abilities: {
           strength: 1,
           dexterity: 1,
@@ -22,98 +41,7 @@ class App extends React.Component {
           charisma: 1,
         },
         savingThrows: {},
-        skills: {
-          acrobatics: {
-            name: "Acrobatics",
-            ability: "dexterity",
-            proficient: false
-          },
-          animalHandling:{
-            name: "Animal Handling",
-            ability: "wisdom",
-            proficient: false
-          },
-          arcana:{
-            name: "Arcana",
-            ability: "intelligence",
-            proficient: false
-          },
-          athletics:{
-            name: "Athletics",
-            ability: "strength",
-            proficient: false
-          },
-          deception:{
-            name: "Deception",
-            ability: "charisma",
-            proficient: false
-          },
-          history:{
-            name: "History",
-            ability: "intelligence",
-            proficient: false
-          },
-          insight:{
-            name: "Insight",
-            ability: "wisdom",
-            proficient: false
-          },
-          intimidation:{
-            name: "Intimidation",
-            ability: "charisma",
-            proficient: false
-          },
-          investigation:{
-            name: "Investication",
-            ability: "intelligence",
-            proficient: false
-          },
-          medicine:{
-            name: "Medicine",
-            ability: "wisdom",
-            proficient: false
-          },
-          nature:{
-            name: "Nature",
-            ability: "intelligence",
-            proficient: false
-          },
-          perception:{
-            name: "Perception",
-            ability: "wisdom",
-            proficient: false
-          },
-          performance:{
-            name: "Performance",
-            ability: "charisma",
-            proficient: false
-          },
-          persuasion:{
-            name: "Persuasion",
-            ability: "charisma",
-            proficient: false
-          },
-          religion:{
-            name: "Religion",
-            ability: "intelligence",
-            proficient: false
-          },
-          sleightOfHand: {
-            name: "Sleight of Hand",
-            ability: "dexterity",
-            proficient: false
-          },
-          stealth:{
-            name: "Stealth",
-            ability: "dexterity",
-            proficient: false
-          },
-          survival:{
-            name: "Survival",
-            ability: "wisdom",
-            proficient: false
-          },
-        },
+        skills: {},
       },
       changeLog: {}
     }
@@ -131,10 +59,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Character Sheet</h1>
         <Abilities
           abilities={this.state.character.abilities}
           editAbility={this.editAbility}
+        />
+        <InspirationProficiency
+          inspiration={this.state.character.inspiration}
+          proficiencyBonus={this.state.character.proficiencyBonus}
         />
         <SavingThrows
           savingThrows={this.state.character.savingThrows}

@@ -13,7 +13,7 @@ class Abilities extends React.Component {
     }
 
     render() {
-        return <div className="ability-div">
+        return <div className="abilities-div item">
             <h2>Ability Scores</h2>
             <div className="ability-list">
                 {Object.keys(this.props.abilities).map(this.mapAbilities)}

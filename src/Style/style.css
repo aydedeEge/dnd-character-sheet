@@ -36,7 +36,7 @@
     justify-items: center;
     grid-area: inspProf;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
         "inspTitle  inspValue"
         "profTitle  profValue"

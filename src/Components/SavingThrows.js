@@ -9,14 +9,16 @@ class SavingThrows extends React.Component  {
         return <EditSavingThrowField
             key={key}
             index={key}
-            saveAbility={getModifier(this.props.abilities[key])}    
+            saveAbility={getModifier(this.props.abilities[key])}  
+            savingThrow={this.props.savingThrows[key]}  
+            editSavingThrow={this.props.editSavingThrow}
         />
     }
 
     render() {
         return (
             <div className="saving-throws-div">
-                <h2>Saving Throws</h2>
+                <p>Saving Throws</p>
                 {Object.keys(this.props.abilities).map(this.savingThrowMap)}
             </div>
         )

@@ -11,6 +11,7 @@ class SavingThrows extends React.Component  {
             index={key}
             saveAbility={getModifier(this.props.abilities[key])}  
             savingThrow={this.props.savingThrows[key]}  
+            level={this.props.level}
             editSavingThrow={this.props.editSavingThrow}
         />
     }

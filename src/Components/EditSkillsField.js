@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import { findProficiencyBonus } from "../helpers.js";
 
 class EditSkillsField extends React.Component  {
 
@@ -16,7 +17,7 @@ class EditSkillsField extends React.Component  {
                 </label>
                 <h5 className="skill-ability skill-item">{this.props.name}</h5>
                 <p className="skill-value skill-item"> 
-                    {this.props.skillProficiency===true ? parseInt(this.props.abilityModifier) + 2 : parseInt(this.props.abilityModifier)}
+                    {this.props.skillProficiency===true ? parseInt(this.props.abilityModifier) + findProficiencyBonus(this.props.level) : parseInt(this.props.abilityModifier)}
                 </p>
             </div>
         )

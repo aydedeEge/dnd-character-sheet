@@ -23,7 +23,7 @@ class InspirationProficiency extends React.Component  {
                     onChange={this.onChangeInspiration}
                 />
                 <h4 className="prof-title">Prof. Bonus</h4>
-                <p className="prof-value">{this.props.level}</p>
+                <p className="prof-value">{findProficiencyBonus(this.props.level)}</p>
             </div>
         )
     }

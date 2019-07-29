@@ -188,12 +188,14 @@ class App extends React.Component {
         />
         <SavingThrows
           abilities={this.state.character.abilities}
+          level={this.state.character.level}
           savingThrows={this.state.character.savingThrows}
           editSavingThrow={this.editSavingThrow}
         />
         <Skills
           skills={this.state.character.skills}
           abilities={this.state.character.abilities}
+          level={this.state.character.level}
           editSkill={this.editSkill}
         />
       </div>

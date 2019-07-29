@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { abbreviateWords } from "../helpers.js";
+import { abbreviateWords, findProficiencyBonus } from "../helpers.js";
 
 class EditSavingThrowField extends React.Component  {
 
@@ -18,7 +18,7 @@ class EditSavingThrowField extends React.Component  {
                 </label>
                 <h5 className="saving-throw-ability saving-throw-item">{abbreviateWords(this.props.index)}</h5>
                 <p className="saving-throw-value  saving-throw-item"> 
-                    {this.props.savingThrow===true?parseInt(this.props.saveAbility) + 2:parseInt(this.props.saveAbility)}
+                    {this.props.savingThrow===true?parseInt(this.props.saveAbility) + findProficiencyBonus(this.props.level):parseInt(this.props.saveAbility)}
                 </p>
             </div>
         )

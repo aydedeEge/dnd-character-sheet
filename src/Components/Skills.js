@@ -13,6 +13,7 @@ class Skills extends React.Component  {
             name={sampleSkills[key].name}
             skillProficiency={this.props.skills[key]}
             abilityModifier={getModifier(this.props.abilities[sampleSkills[key].ability])}
+            level={this.props.level}
             editSkill={this.props.editSkill}
         />
     }
